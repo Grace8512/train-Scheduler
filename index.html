@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Time Sheet</title>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
+
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- head -->
+        <div class="jumbotron" style="background-color: #3A2A42; color: white">
+            <h1 class="text-center">Train Time</h1>   
+        </div>
+
+        <!-- main -->
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- current employees -->
+                <div class="card mb-4">
+                    <div class="card-header">Current Train Schedule</div>
+                    <div class="card-body">
+                      <table class="table table-sm table-hover" id='trainInputInfo'>
+                      <thead>
+                        <tr>
+                          <th>Train Name</th>
+                          <th>Destination</th>
+                          <th>Frequency(min)</th>
+                          <th>Next Arrival</th>
+                          <th>Minutes Away</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+
+                      </tbody>  
+                    </table>
+                  </div>    
+                </div>
+
+                <!-- add employee -->
+                <div class="card mb-4">
+                  <div class="card-header">Add Train</div>
+                    <div class="card-body">
+                    
+                        <form>
+                            <div class="form-group">
+                                <label for="inputName">Train Name</label>
+                                <input id="inputName" class="form-control" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputDes">Destination</label>
+                                <input id="inputDes" class="form-control" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTrainTime">Train Time (HH:mm)</label>
+                                <input id="inputTrainTime" class="form-control" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputFre">Frequency(min)</label>
+                                <input id="inputFre" class="form-control" type="text">
+                            </div>
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- JavaScript -->
+    <script src="logic.js"></script>
+  </body>
+
+</html>
